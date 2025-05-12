@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Coloring Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pixel Art Coloring Game</h1>
+        
+        <div class="game-container">
+            <div class="template-selection">
+                <h2>1. Select a template</h2>
+                <div class="templates">
+                    <div class="template" data-template="cat">
+                        <img src="assets/templates/cat.png" alt="Gato">
+                        <span>Gato</span>
+                    </div>
+                    <div class="template" data-template="dog">
+                        <img src="assets/templates/dog.png" alt="Perro">
+                        <span>Perro</span>
+                    </div>
+                    <div class="template" data-template="tree">
+                        <img src="assets/templates/tree.png" alt="Árbol">
+                        <span>Árbol</span>
+                    </div>
+                    <div class="template" data-template="house">
+                        <img src="assets/templates/house.png" alt="Casa">
+                        <span>Casa</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="coloring-section">
+                <h2>2. Color your Pixel Art</h2>
+                <div class="grid-container">
+                    <div id="pixel-grid" class="pixel-grid"></div>
+                    <div class="controls">
+                        <div class="color-palette" id="color-palette"></div>
+                        <div class="selected-color" id="selected-color"></div>
+                        <button id="check-btn" class="pixel-btn">Verificar</button>
+                        <button id="download-btn" class="pixel-btn" disabled>Descargar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

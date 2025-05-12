@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordena la Historia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="app">
+        <!-- Paso 1: Subir historia -->
+        <div class="step" id="step1">
+            <h1>Generador de Ordenamiento de Imágenes</h1>
+            <p class="instructions">Paso 1: Sube tu historia en formato TXT</p>
+            <div class="upload-area" id="text-upload-area">
+                <i class="fas fa-file-alt"></i>
+                <p>Arrastra tu archivo TXT aquí o haz clic para seleccionar</p>
+                <input type="file" id="text-file" accept=".txt">
+            </div>
+            <div class="story-preview" id="story-preview" style="display: none;">
+                <h3>Vista previa de la historia:</h3>
+                <div id="story-content"></div>
+            </div>
+            <button id="next-step1" class="btn" disabled>Siguiente</button>
+        </div>
+
+        <!-- Paso 2: Subir imágenes -->
+        <div class="step" id="step2" style="display: none;">
+            <h1>Sube tus imágenes</h1>
+            <p class="instructions">Paso 2: Selecciona cuántas imágenes quieres subir</p>
+            <div class="image-count-selector">
+                <label for="image-count">Número de imágenes:</label>
+                <input type="number" id="image-count" min="1" max="20" value="3">
+            </div>
+            
+            <div class="upload-area" id="image-upload-area">
+                <i class="fas fa-images"></i>
+                <p>Arrastra tus imágenes aquí o haz clic para seleccionar</p>
+                <input type="file" id="image-files" accept="image/*" multiple>
+            </div>
+            
+            <div class="image-preview-container" id="image-preview-container">
+                <h3>Imágenes subidas:</h3>
+                <div class="image-preview-grid" id="image-preview-grid"></div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button id="prev-step2" class="btn">Anterior</button>
+                <button id="next-step2" class="btn" disabled>Generar Juego</button>
+            </div>
+        </div>
+
+        <!-- Paso 3: Juego de ordenamiento -->
+        <div class="step" id="step3" style="display: none;">
+            <h1>Ordena la Historia</h1>
+            <div class="story-display" id="story-display"></div>
+            
+            <div class="game-instructions">
+                <p>Ordena las imágenes según la secuencia correcta de la historia.</p>
+            </div>
+            
+            <div class="game-container">
+                <div class="image-slots" id="image-slots"></div>
+                <div class="image-pool" id="image-pool"></div>
+            </div>
+            
+            <button id="check-order" class="btn">Verificar Orden</button>
+            <div id="result-message"></div>
+            
+            <button id="restart-game" class="btn">Reiniciar Juego</button>
+            <button id="new-game" class="btn">Nuevo Juego</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

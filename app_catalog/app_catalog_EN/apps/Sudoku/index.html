@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Incluir JSZip desde un CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Sudoku Generator</h1>
+        <div class="input-section">
+            <!-- Cargar Instrucciones -->
+            <label for="instructions">
+                Load Instructions (.txt file)
+                <span class="tooltip">ℹ️
+                    <span class="tooltiptext">Upload a .txt file with the Sudoku instructions.</span>
+                </span>
+            </label>
+            <input type="file" id="instructions" accept=".txt">
+
+            <!-- Filas y Columnas -->
+            <div class="row">
+                <div class="input-group">
+                    <label for="rows">
+                        Filas
+                        <span class="tooltip">ℹ️
+                            <span class="tooltiptext">Enter the number of rows for the Sudoku (between 4 and 9).</span>
+                        </span>
+                    </label>
+                    <input type="number" id="rows" min="4" max="9" value="9">
+                </div>
+                <div class="input-group">
+                    <label for="columns">
+                        Columnas
+                        <span class="tooltip">ℹ️
+                            <span class="tooltiptext">Enter the number of columns for the Sudoku (between 4 and 9).</span>
+                        </span>
+                    </label>
+                    <input type="number" id="columns" min="4" max="9" value="9">
+                </div>
+            </div>
+
+            <!-- Botón para generar el Sudoku -->
+            <button id="generate">Generate Sudoku</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

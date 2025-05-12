@@ -1,0 +1,19 @@
+Prueba con el acertijo:
+Pregunta:
+¿Qué tiene llaves pero no puede abrir puertas?
+
+Respuesta Correcta:
+
+Texto: Un teclado
+
+Imagen: (Opcional, puedes cargar una imagen de un teclado).
+
+Respuestas Incorrectas:
+
+Respuesta 1: Un candado (o imagen de un candado).
+
+Respuesta 2: Un coche (o imagen de un coche).
+
+Generar Acertijo: Haz clic en el botón "Generar Acertijo".
+
+Seleccionar Respuesta: Elige una opción y verifica si es correcta o no.

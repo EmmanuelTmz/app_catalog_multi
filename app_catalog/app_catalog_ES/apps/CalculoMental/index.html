@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Mental Unificada</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+</head>
+<body>
+    <div id="app-container">
+        <!-- Pantalla del generador -->
+        <div id="generator-screen">
+            <h1>Generador de Calculadora Mental</h1>
+            <div class="upload-section">
+                <h2>Cargar Archivo TXT</h2>
+                <p><strong>Formato:</strong> Primera línea con operación (ej: <code>5,+3,*2</code>), luego respuestas (una con *)</p>
+                <input type="file" id="fileInput" accept=".txt">
+                <button id="validateBtn">Validar</button>
+                <div id="validationResult"></div>
+            </div>
+            <div id="game-options" class="hidden">
+                <label for="displayTime">Velocidad (ms):</label>
+                <input type="number" id="displayTime" value="500" min="100" max="2000">
+                <button id="startGameBtn">Comenzar Juego</button>
+            </div>
+        </div>
+
+        <!-- Pantalla del juego (oculta inicialmente) -->
+        <div id="game-screen" class="hidden">
+            <h1>Calculadora Mental</h1>
+            <div id="operation-display"></div>
+            <div id="options-container"></div>
+            <button id="restart-btn">Repetir</button>
+            <div id="score-display">Puntos: 0</div>
+            <button id="back-btn">Volver al Generador</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

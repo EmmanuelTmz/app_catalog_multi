@@ -1,0 +1,20 @@
+GATO.Animal doméstico que maúlla
+PERRO-Mejor amigo del hombre
+SOL/Estrella que ilumina la Tierra
+LUNA,Satélite natural de la Tierra
+ÁRBOL:Planta de tronco leñoso
+FLOR:Parte colorida de las plantas
+CASA:Lugar donde viven las personas
+AGUA:Elemento esencial para la vida
+LIBRO:Conjunto de páginas escritas
+TIEMPO:Duración de los eventos
+MESA:Mueble con patas y superficie plana
+SILLA:Asiento con respaldo
+VENTANA:Abertura en la pared para entrar luz
+PUERTA:Entrada a una habitación
+CIELO:Espacio visible sobre la Tierra
+NUBE:Acumulación de vapor de agua en el cielo
+LLUVIA:Precipitación de gotas de agua
+VIENTO:Movimiento del aire
+FUEGO:Combustión que produce luz y calor
+TIERRA:Planeta que habitamos

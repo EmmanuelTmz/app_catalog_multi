@@ -1,0 +1,54 @@
+<!DOCTYPE html>n
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Incluir JSZip desde un CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 data-i18n="acertijo_title">Riddle Generator</h2>
+        <div class="input-section">
+            <!-- Pregunta -->
+            <label for="question">Question:</label>
+            <textarea id="question" placeholder="Enter your question here..."></textarea>
+
+            <!-- Respuesta Correcta -->
+            <label for="correct-answer">
+                Correct Answer (text or image)
+                <span class="tooltip">ℹ️
+                    <span class="tooltiptext">You can enter text or upload an image.</span>
+                </span>
+            </label>
+            <input type="text" id="correct-answer-text" placeholder="Correct answer text">
+            <input type="file" id="correct-answer-image" accept="image/*">
+
+            <!-- Respuestas Incorrectas -->
+            <label for="wrong-answer1">
+                Incorrect Answer 1 (text or image)
+                <span class="tooltip">ℹ️
+                    <span class="tooltiptext">You can enter text or upload an image.</span>
+                </span>
+            </label>
+            <input type="text" id="wrong-answer1-text" placeholder="Incorrect answer text 1">
+            <input type="file" id="wrong-answer1-image" accept="image/*">
+
+            <label for="wrong-answer2">
+                Incorrect Answer 2 (text or image)
+                <span class="tooltip">ℹ️
+                    <span class="tooltiptext">You can enter text or upload an image.</span>
+                </span>
+            </label>
+            <input type="text" id="wrong-answer2-text" placeholder="Incorrect answer text 2">
+            <input type="file" id="wrong-answer2-image" accept="image/*">
+
+            <!-- Botón para generar el acertijo -->
+            <button id="generate">Generate Riddle</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

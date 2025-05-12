@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Puzzle Generator</h1>
+        
+        <div class="upload-section">
+            <h2>1. Upload your image</h2>
+            <div class="file-upload">
+                <label for="image-upload" class="upload-label">
+                    <span id="file-name">No file selected</span>
+                    <span class="browse-btn">Select file</span>
+                </label>
+                <input type="file" id="image-upload" accept="image/*">
+            </div>
+        </div>
+        
+        <div class="settings-section">
+            <h2>2. Puzzle configuration</h2>
+            <div class="difficulty-options">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy (3x3)</option>
+                    <option value="medium">Medium (4x4)</option>
+                    <option value="hard">Hard (5x5)</option>
+                </select>
+            </div>
+            <button id="generate-btn" class="pixel-btn">Generate Puzzles</button>
+        </div>
+        
+        <div class="preview-section">
+            <h2>3. Preview</h2>
+            <div class="image-container">
+                <img id="original-image" src="" alt="Imagen original">
+            </div>
+            <div id="puzzle-board" class="puzzle-board"></div>
+        </div>
+        
+        <button id="download-btn" class="pixel-btn download-btn">Download Puzzles</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

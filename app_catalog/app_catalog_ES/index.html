@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Aplicaciones</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/language-manager.js" defer></script>
+</head>
+<body>
+    <header>
+        
+        <h1>Catálogo de Aplicaciones</h1>
+        
+        <div class="app-selector">
+            <button class="dropdown-btn">
+                <span id="current-app">Seleccionar App</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" data-app="Sudoku" data-src="apps/Sudoku/index.html">Sudoku</a>
+                <a href="#" data-app="Acertijo" data-src="apps/Acertijo/index.html">Acertijo</a>
+                <a href="#" data-app="CalculoMental" data-src="apps/CalculoMental/index.html">Cálculo Mental</a>
+                <a href="#" data-app="Memorama" data-src="apps/Memorama/index.html">Memorama</a>
+                <a href="#" data-app="Crucigrama" data-src="apps\Crucigrama\index.html">Crucigrama</a>
+                <a href="#" data-app="Crucigrama" data-src="apps\OdenadorIMG\index.html">Ordenar Imagenes</a>
+                <a href="#" data-app="Blockly" data-src="apps\Blockly\index.html">Blockly</a>
+                <a href="#" data-app="Rompecabezas" data-src="apps\Rompecabezas\index.html">Rompecabezas</a>
+                <a href="#" data-app="Ahorcado" data-src="apps\Ahorcado\index.html">Ahorcado</a>
+                <a href="#" data-app="Pixelart" data-src="apps\Pixelart\index.html">Pixelart</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="app-container" id="app-container">
+        <div class="no-app-selected">
+            Selecciona una aplicación del menú desplegable
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

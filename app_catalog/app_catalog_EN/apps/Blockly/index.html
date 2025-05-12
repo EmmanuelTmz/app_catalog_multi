@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blockly Activity Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="lib/blockly/blockly_compressed.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Educational Activity Generator</h1>
+            <div class="activity-controls">
+                <select id="activity-select">
+                    <option value="">Select activity</option>
+                    <option value="math">Mathematics</option>
+                    <option value="art">Generative Art</option>
+                    <option value="logic">Logic</option>
+                </select>
+                <button id="run-btn" class="blockly-btn">Execute</button>
+                <button id="reset-btn" class="blockly-btn">Restart</button>
+            </div>
+        </header>
+
+        <div class="workspace-container">
+            <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+            <div class="output-panel">
+                <h3>Instructions</h3>
+                <div id="instructions" class="instructions"></div>
+                <h3>Result</h3>
+                <div id="output" class="output"></div>
+                <div id="canvas-container">
+                    <canvas id="artCanvas" width="400" height="400" style="display:none;"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <button id="download-activity" class="blockly-btn">Download Activity</button>
+            <button id="download-solution" class="blockly-btn">Download Solution</button>
+        </div>
+    </div>
+
+    <!-- Blockly and dependencies -->
+    <script src="lib/blockly/blockly_compressed.js"></script>
+    <script src="lib/blockly/blocks_compressed.js"></script>
+    <script src="lib/blockly/javascript_compressed.js"></script>
+    <script src="lib/blockly/msg/es.js"></script>
+    <script src="lib/js-interpreter/interpreter.js"></script>
+    
+    <!-- Custom blocks -->
+    <script src="blocks/math_blocks.js"></script>
+    <script src="blocks/art_blocks.js"></script>
+    <script src="blocks/logic_blocks.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

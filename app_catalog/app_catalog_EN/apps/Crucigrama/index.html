@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Crossword Puzzle Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container py-4">
+    <h1 class="text-center mb-4">Interactive Crossword Puzzle Generator</h1>
+    
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="mb-3">
+                <label class="form-label">Upload your word file (.txt)</label>
+                <input type="file" id="fileInput" class="form-control" accept=".txt">
+                <div class="form-text">Format: word:track (one per line)</div>
+            </div>
+            
+            <div id="errorContainer" class="alert alert-danger d-none"></div>
+            
+            <div id="loadingIndicator" class="text-center my-4 d-none">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2">Generating crossword puzzle...</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="resultContainer" class="d-none">
+        <div class="row">
+            <div class="col-md-8">
+                <div id="crosswordGrid" class="crossword-grid mb-4"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        Pistas
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Horizontals</h5>
+                        <div id="acrossClues"></div>
+                        <h5 class="card-title mt-3">Verticals</h5>
+                        <div id="downClues"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="completionMessage" class="alert alert-success d-none text-center">
+            Congratulations! You have completed the crossword puzzle correctly.
+        </div>
+        
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+            <button id="checkBtn" class="btn btn-warning me-md-2">
+                Verify Responses
+            </button>
+            <button id="solutionBtn" class="btn btn-secondary me-md-2">
+                Show Solution
+            </button>
+            <button id="downloadBtn" class="btn btn-success">
+                Download Crossword Puzzle
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

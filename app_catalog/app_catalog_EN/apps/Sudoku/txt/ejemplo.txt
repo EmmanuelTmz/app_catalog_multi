@@ -1,0 +1,8 @@
+Reglas Básicas
+Cuadrícula Inicial: Al comenzar, la cuadrícula tendrá algunos números ya colocados. Estos números no se pueden cambiar y sirven como pistas para resolver el rompecabezas.
+
+Llenado de Espacios Vacíos: Debes completar los espacios vacíos con números del 1 al 9, siguiendo las reglas mencionadas.
+
+Sin Repeticiones: No se puede repetir ningún número en una misma fila, columna o subcuadrícula.
+
+Solo Números del 1 al 9: No se pueden usar números fuera de este rango.

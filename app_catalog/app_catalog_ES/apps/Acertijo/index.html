@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Acertijos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js\language-manager.js" defer></script>
+    <!-- Incluir JSZip desde un CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 data-i18n="acertijo_title">Generador de Acertijos</h2>
+        <div class="input-section">
+            <!-- Pregunta -->
+            <label for="question">Pregunta:</label>
+            <textarea id="question" placeholder="Ingresa tu pregunta aquí..."></textarea>
+
+            <!-- Respuesta Correcta -->
+            <label for="correct-answer">
+                Respuesta Correcta (texto o imagen)
+                <span class="tooltip">ℹ️
+                    <span class="tooltiptext">Puedes ingresar texto o cargar una imagen.</span>
+                </span>
+            </label>
+            <input type="text" id="correct-answer-text" placeholder="Texto de la respuesta correcta">
+            <input type="file" id="correct-answer-image" accept="image/*">
+
+            <!-- Respuestas Incorrectas -->
+            <label for="wrong-answer1">
+                Respuesta Incorrecta 1 (texto o imagen)
+                <span class="tooltip">ℹ️
+                    <span class="tooltiptext">Puedes ingresar texto o cargar una imagen.</span>
+                </span>
+            </label>
+            <input type="text" id="wrong-answer1-text" placeholder="Texto de la respuesta incorrecta 1">
+            <input type="file" id="wrong-answer1-image" accept="image/*">
+
+            <label for="wrong-answer2">
+                Respuesta Incorrecta 2 (texto o imagen)
+                <span class="tooltip">ℹ️
+                    <span class="tooltiptext">Puedes ingresar texto o cargar una imagen.</span>
+                </span>
+            </label>
+            <input type="text" id="wrong-answer2-text" placeholder="Texto de la respuesta incorrecta 2">
+            <input type="file" id="wrong-answer2-image" accept="image/*">
+
+            <!-- Botón para generar el acertijo -->
+            <button id="generate">Generar Acertijo</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
